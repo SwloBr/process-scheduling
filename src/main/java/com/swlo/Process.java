@@ -3,7 +3,6 @@ package com.swlo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@AllArgsConstructor
 @Data
 public class Process {
 
@@ -11,7 +10,14 @@ public class Process {
     int arrivalTime;
     int burstTime;
     int priority;
-    int waitingTime;
-    int turnaroundTime;
 
+    private int originalBurstTime;
+
+    public Process(String id, int arrivalTime, int burstTime, int priority) {
+        this.id = id;
+        this.arrivalTime = arrivalTime;
+        this.burstTime = burstTime;
+        this.priority = priority;
+        this.originalBurstTime = burstTime;
+    }
 }

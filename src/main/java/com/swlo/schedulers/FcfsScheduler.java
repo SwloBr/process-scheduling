@@ -10,6 +10,7 @@ public class FcfsScheduler  extends  AbstractScheduler{
 
 
     public FcfsScheduler(boolean isPreemptive) {
+
         super("First-Come, First-Served", isPreemptive);
 
         if (isPreemptive) {
