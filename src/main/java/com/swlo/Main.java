@@ -23,8 +23,8 @@ public class Main {
         schedulers.add(new FcfsScheduler(false));
         schedulers.add(new SjfScheduler(false));
         schedulers.add(new RoundRobinScheduler(2)); // time quantum = 2
-        schedulers.add(new PriorityScheduler(false));
-        schedulers.add(new PriorityMultiQueueScheduler(false, 3)); // 3 filas de prioridade
+        schedulers.add(new PriorityScheduler(true));
+        schedulers.add(new PriorityMultiQueueScheduler(true, 3)); // 3 filas de prioridade
         schedulers.add(new LotteryScheduler(true));
 
         try (FileWriter writer = new FileWriter("schedulers_results.txt")) {
